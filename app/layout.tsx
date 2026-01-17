@@ -1,6 +1,6 @@
 import '@/app/ui/global.css';
 
-import {inter} from '@/app/ui/font';
+import {inter} from '@/app/ui/fonts';
 import navLinks from '@/app/ui/dashboard/nav-links';
 
 
