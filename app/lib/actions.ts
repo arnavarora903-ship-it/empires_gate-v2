@@ -28,11 +28,11 @@ export async function createInvoice(formData: FormData) {
   });
     const amountInCents = amount * 100; /*this converts amount in cents to avoid floating point error*/
     const date = new Date().toISOString().split('T')[0];
-     await sql`
+    await sql`
     INSERT INTO invoices (customer_id, amount, status, date)
     VALUES (${customerId}, ${amountInCents}, ${status}, ${date})
   `;
-    revalidatePath('/dashboard/invoices');
-    redirect('/dashboard/invoices');
+    revalidatePath('/dashboard/Invoices');
+    redirect('/dashboard/Invoices');
 }
 
